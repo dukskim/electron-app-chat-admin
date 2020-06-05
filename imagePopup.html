@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+    </title>
+    <script>
+        const { ipcRenderer } = require('electron')
+        ipcRenderer.on('child-image', (event, arg) => {
+            const childImage = document.getElementById('childImage')
+            childImage.src = arg
+        })
+    </script>
+</head>
+<body>
+    <img id="childImage" src="">
+</body>
+</html>
